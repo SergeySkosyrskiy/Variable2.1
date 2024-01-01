@@ -51,14 +51,14 @@ public class Main {
 
         System.out.println("Задача№4");
 
-        int oneMin=8;
+        int oneMin = 16 / 2;
         int firstCondition = 20* oneMin;
         System.out.println("За 20 минут машина произвела " +firstCondition+  " штук бутылок" );
-        int secondCondition = 24*60*8;
+        int secondCondition = 24*60*oneMin;
         System.out.println("За сутки машина произвела " +secondCondition+  " штук бутылок" );
-        int thirdCondition = 3*24*60*8;
+        int thirdCondition = 3*secondCondition;
         System.out.println("За 3 дня машина произвела " +thirdCondition+  " штук бутылок" );
-        int fourthCondition = 30*24*60*8;
+        int fourthCondition = 30*secondCondition;
         System.out.println("За 1 месяц машина произвела " +fourthCondition+  " штук бутылок" );
 
         System.out.println("Задача№5");
@@ -81,11 +81,11 @@ public class Main {
         short egg = 70;
 
         int grams = bananas * 5 + milk * 2 + iceCream * 2 + egg * 4;
-        float kg = grams / 1000;
+        float kg = grams / 1000F;
 
 
         System.out.println("Количество грамм завтрака составляет "+grams+ " грамм. Количество килограмм = "+kg+ " килограмм." );
-//вывод в кг округляется до 1 кг, без ,09 грамм. Не знаю как пофиксить!
+
 
         System.out.println("Задача№7");
 
@@ -95,39 +95,40 @@ public class Main {
 
         int quantityDay1 = weight / diet1;
         int quntityDay2 = weight / diet2;
+        int quantityMidle = (quantityDay1 + quntityDay2) / 2;
 
-
-        System.out.println("Количество дней для похужения при использовании первого рациона = " +quantityDay1+ " Количество дней для похудения при использовании второго рациона = "+quntityDay2 );
+        System.out.println("Количество дней для похужения при использовании первого рациона = " +quantityDay1+ ". Количество дней для похудения при использовании второго рациона = "+quntityDay2+ ". Среднее количество дней для похудения составляет = "+quantityMidle );
 
 
         System.out.println("Задача№8");
 
 
-        int Masha = 67760;
-        int Denis = 83690;
-        int Kristina = 76230;
+        int masha = 67760;
+        int denis = 83690;
+        int kristina = 76230;
+        float ratio = 10 / 100F;
+        int year = 12;
+
+        float indexMasha = masha * ratio;
+        int yearQuantityMashaOld = masha * year;
+        float salaryMasha = masha + indexMasha;
+        float yearQuantityMashaNew = salaryMasha * year;
+        float differenceMasha = yearQuantityMashaNew - yearQuantityMashaOld;
 
 
-        int indexMasha = Masha * 10 / 100;
-        int yearQuantityMashaOld = Masha * 12;
-        int salaryMasha = Masha + indexMasha;
-        int yearQuantityMashaNew = salaryMasha * 12;
-        int differenceMasha = yearQuantityMashaNew - yearQuantityMashaOld;
+        float indexDenis = denis * ratio;
+        int yearQuantityDenisOld = denis * year;
+        float salaryDenis = denis + indexDenis;
+        float yearQuantityDenisNew = salaryDenis * year;
+        float differenceDenis = yearQuantityDenisNew - yearQuantityDenisOld;
 
-
-        int indexDenis = Denis * 10 / 100;
-        int yearQuantityDenisOld = Denis * 12;
-        int salaryDenis = Denis + indexDenis;
-        int yearQuantityDenisNew = salaryDenis * 12;
-        int differenceDenis = yearQuantityDenisNew - yearQuantityDenisOld;
-
-        int indexKristina = Denis * 10 / 100;
-        int yearQuantityKristinaOld = Denis * 12;
-        int salaryKristina = Kristina + indexKristina;
-        int yearQuantityKristinaNew = salaryKristina * 12;
-        int differenceKristina = yearQuantityKristinaNew - yearQuantityKristinaOld;
+        float indexKristina = kristina * ratio;
+        int yearQuantityKristinaOld = kristina * year;
+        float salaryKristina = kristina + indexKristina;
+        float yearQuantityKristinaNew = salaryKristina * year;
+        float differenceKristina = yearQuantityKristinaNew - yearQuantityKristinaOld;
         System.out.println ("Маша теперь получает " +salaryMasha+ " рублей. Годовой доход вырос на " +differenceMasha+ " рублей " );
         System.out.println ("Денис теперь получает " +salaryDenis+ " рублей. Годовой доход вырос на " +differenceDenis+ " рублей " );
-        System.out.println ("Кристина теперь получает " +salaryKristina+ " рублей. Годовой доход вырос на " +differenceKristina+ " рублей " );
+        System.out.println ("Кристина теперь получает " +salaryKristina+ " рублей. Годовой доход вырос на " +differenceKristina+ " рублей  " );
     }
 }
